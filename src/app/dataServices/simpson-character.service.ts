@@ -16,19 +16,26 @@ export class SimpsonCharacterService {
   }
 
   filterCharacters(e: any, filteredCharacterName: any) {
-
+    console.log('what is e manny',e)
+    console.log('manny do you want a hotdog',filteredCharacterName)
     var tempData: any = []
+    
     this.filteredCharacters = this.characters.filter((d: any) => d != filteredCharacterName)
+    console.log('manny does not want a hotdog', this.filteredCharacters)
+    
+    var isChecked = e.target.checked
+      console.log('isChecked',e)
+    if (isChecked == true) {
+      console.log("TRUE BLUE")
+      return this.filteredCharacters
+    }
+    else  {
+      console.log("FALSE-A-ROO")
+      return this.characters
+      
+    }
+    // return this.filteredCharacters
 
-    return this.filteredCharacters
-
-    // var isChecked = e.target.checked
-
-    // if (isChecked == true) {
-    //   console.log("TRUE BLUE")
-    // }
-    // else {
-    //   console.log("FALSE-A-ROO")
-    // }
   }
+  
 }
