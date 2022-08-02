@@ -12,12 +12,14 @@ export class FilterDataComponent implements OnInit {
 
   myCharacters: any = []
   topMenuCharacters: any = []
+  displayedCharacters: any = []
 
   ngOnInit(): void {
 
     //SET COMPONENT VARIABLES = DataServiceCalls()
     this.topMenuCharacters = this._characterService.getAllCharacters();
     this.myCharacters = this._characterService.getAllCharacters()
+    this.displayedCharacters = this._characterService.getAllCharacters()
   }
 
   /* The filterCharacter() function Below gets called from the HTML page on the (change) event....it filters the data
@@ -26,6 +28,7 @@ export class FilterDataComponent implements OnInit {
   filterCharacters(e: any) {
     var nameToFilter = e.target.defaultValue
     this.myCharacters = this._characterService.filterCharacters(e, nameToFilter)
+    // this.displayedCharacters = this.myCharacters;
     console.log("this.myCharacters", this.myCharacters)
   }
 

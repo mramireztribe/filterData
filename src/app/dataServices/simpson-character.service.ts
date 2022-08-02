@@ -27,13 +27,13 @@ export class SimpsonCharacterService {
     this.x = this.filteredCharacters2;
     console.log('manny does not want a hotdog', this.x)
 
-    return this.x
+    // return this.x
 
     var isChecked = e.target.checked
     console.log('isChecked', e)
     if (isChecked == true) {
-      console.log("TRUE BLUE")
-      return this.filteredCharacters
+      console.log("TRUE BLUE", this.filteredCharacters2)
+      return this.filteredCharacters2
     }
     else {
       console.log("FALSE-A-ROO")
