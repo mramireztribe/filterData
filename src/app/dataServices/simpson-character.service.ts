@@ -22,15 +22,11 @@ export class SimpsonCharacterService {
     console.log("myCharactersFoo", myCharacters)
     this.filteredCharacters2 = myCharacters.filter((d: any) => d != filteredCharacterName)
 
-    console.log("you will be returning this.filteredCharacters]2", this.filteredCharacters2)
-    return this.filteredCharacters2
+    // return this.filteredCharacters2 // This RETURNS the data....and is CORRECT
 
-    console.log('what is e manny', e)
-    console.log("defaultValue", e.target.defaultValue)
-    console.log('manny do you want a hotdog', filteredCharacterName)
     var tempData: any = []
 
-    this.filteredCharacters2 = this.characters.filter((d: any) => d != filteredCharacterName)
+    // this.filteredCharacters2 = this.characters.filter((d: any) => d != filteredCharacterName)
 
     // return this.x
 
@@ -42,7 +38,22 @@ export class SimpsonCharacterService {
     }
     else {
       console.log("FALSE-A-ROO")
-      return this.characters
+      var itemToReAdd: any;
+      console.log("asdfasdfasdfasdfsa", this.filteredCharacters2)
+      this.filteredCharacters2.push(filteredCharacterName)
+      console.log("with Kenny", this.filteredCharacters2)
+      // this.filteredCharacters2.forEach((newD: any) => {
+      //   console.log("newD = " + newD)
+      //   if (newD == filteredCharacterName) {
+      //     console.log("Time to RE....add: " + filteredCharacterName)
+      //   }
+      //   else {
+      //     console.log("You are screwed.......", filteredCharacterName)
+      //     this.filteredCharacters2.push(filteredCharacterName)
+      //     console.log("You just added: " + filteredCharacterName)
+      //   }
+      // });
+      return this.filteredCharacters2;
     }
     // return this.filteredCharacters
 
