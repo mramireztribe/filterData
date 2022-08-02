@@ -15,10 +15,10 @@ export class SimpsonCharacterService {
     return this.characters
   }
 
-  filterCharacters(e: any) {
+  filterCharacters(e: any, filteredCharacterName: any) {
 
     var tempData: any = []
-    this.filteredCharacters = this.characters.filter((d: any) => d != 'Homer')
+    this.filteredCharacters = this.characters.filter((d: any) => d != filteredCharacterName)
 
     return this.filteredCharacters
 

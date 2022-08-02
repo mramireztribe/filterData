@@ -17,8 +17,8 @@ export class FilterDataComponent implements OnInit {
   }
 
   filterCharacters(e: any) {
-    // console.log("in Component....about to call DS filterCharacters(e)")
-    this.myCharacters = this._characterService.filterCharacters(e)
+    var nameToFilter = e.target.defaultValue
+    this.myCharacters = this._characterService.filterCharacters(e, nameToFilter)
     console.log("returned data", this.myCharacters)
   }
 
