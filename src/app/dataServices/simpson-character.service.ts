@@ -9,19 +9,26 @@ export class SimpsonCharacterService {
   constructor() { }
 
   characters: any = ['Homer', 'Marge', 'Bart', 'Lisa', 'Maggie']
+  filteredCharacters: any = [];
 
   getAllCharacters(): any {
     return this.characters
   }
 
   filterCharacters(e: any) {
-    var isChecked = e.target.checked
 
-    if (isChecked == true) {
-      console.log("TRUE BLUE")
-    }
-    else {
-      console.log("FALSE-A-ROO")
-    }
+    var tempData: any = []
+    this.filteredCharacters = this.characters.filter((d: any) => d != 'Homer')
+
+    return this.filteredCharacters
+
+    // var isChecked = e.target.checked
+
+    // if (isChecked == true) {
+    //   console.log("TRUE BLUE")
+    // }
+    // else {
+    //   console.log("FALSE-A-ROO")
+    // }
   }
 }
