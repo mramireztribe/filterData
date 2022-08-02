@@ -16,4 +16,9 @@ export class FilterDataComponent implements OnInit {
     this.myCharacters = this._characterService.getAllCharacters()
   }
 
+  filterCharacters(e: any) {
+    console.log("in Component....about to call DS filterCharacters(e)")
+    this._characterService.filterCharacters(e)
+  }
+
 }

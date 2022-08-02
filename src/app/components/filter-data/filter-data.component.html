@@ -1,6 +1,6 @@
 <ul class="character-checkboxes">
     <li *ngFor="let character of myCharacters">
-        <input type="checkbox" value="{{character}}" name="{{character}}" id="">
+        <input (change)="filterCharacters($event)" type="checkbox" value="{{character}}" name="{{character}}" id="">
         <label for="{{character}}">{{character}}</label>
     </li>
 </ul>

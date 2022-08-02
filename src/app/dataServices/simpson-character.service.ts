@@ -14,7 +14,7 @@ export class SimpsonCharacterService {
     return this.characters
   }
 
-  filterCharacters(charactersArray: any) {
-
+  filterCharacters(e: any) {
+    console.log("in DS filterCharacters()", e.target.value)
   }
 }
