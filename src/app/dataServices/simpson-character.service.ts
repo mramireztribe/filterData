@@ -15,6 +15,13 @@ export class SimpsonCharacterService {
   }
 
   filterCharacters(e: any) {
-    console.log("in DS filterCharacters()", e.target.value)
+    var isChecked = e.target.checked
+
+    if (isChecked == true) {
+      console.log("TRUE BLUE")
+    }
+    else {
+      console.log("FALSE-A-ROO")
+    }
   }
 }
