@@ -18,14 +18,19 @@ export class SimpsonCharacterService {
     return this.characters
   }
 
-  filterCharacters(e: any, filteredCharacterName: any) {
+  filterCharacters(e: any, filteredCharacterName: any, myCharacters: any) {
+    console.log("myCharactersFoo", myCharacters)
+    this.filteredCharacters2 = myCharacters.filter((d: any) => d != filteredCharacterName)
+
+    console.log("you will be returning this.filteredCharacters]2", this.filteredCharacters2)
+    return this.filteredCharacters2
+
     console.log('what is e manny', e)
+    console.log("defaultValue", e.target.defaultValue)
     console.log('manny do you want a hotdog', filteredCharacterName)
     var tempData: any = []
 
     this.filteredCharacters2 = this.characters.filter((d: any) => d != filteredCharacterName)
-    this.x = this.filteredCharacters2;
-    console.log('manny does not want a hotdog', this.x)
 
     // return this.x
 
@@ -38,7 +43,6 @@ export class SimpsonCharacterService {
     else {
       console.log("FALSE-A-ROO")
       return this.characters
-
     }
     // return this.filteredCharacters
 
