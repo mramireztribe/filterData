@@ -26,6 +26,7 @@ export class FilterDataComponent implements OnInit {
   filterCharacters(e: any) {
     var nameToFilter = e.target.defaultValue
     this.myCharacters = this._characterService.filterCharacters(e, nameToFilter)
+    console.log("this.myCharacters", this.myCharacters)
   }
 
 }
