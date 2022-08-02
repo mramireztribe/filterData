@@ -1,0 +1,3 @@
+interface ICharacter {
+  name: string
+}

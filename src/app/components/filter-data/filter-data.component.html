@@ -1,0 +1,10 @@
+<ul class="character-checkboxes">
+    <li *ngFor="let character of myCharacters">
+        <input type="checkbox" value="{{character}}" name="{{character}}" id="">
+        <label for="{{character}}">{{character}}</label>
+    </li>
+</ul>
+<hr>
+<div *ngFor="let character of myCharacters">
+    {{character}}
+</div>

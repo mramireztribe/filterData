@@ -1,0 +1,15 @@
+ul.character-checkboxes{
+    
+    margin:0;
+    padding:0;
+
+    li{
+        list-style-type:none;
+        display:inline-block;
+        margin-right: 10px;
+
+        input{
+            margin-right: 5px;
+        }
+    }
+}
