@@ -1,10 +1,11 @@
+<button (click)="clickSortFunction(topMenuCharacters)">Sort By orderId</button>
 <ul class="character-checkboxes">
     <li *ngFor="let character of topMenuCharacters">
-         <label for="{{character}}">{{character}}</label>
-        <input (change)="filterCharacters($event)" type="checkbox" value="{{character}}" name="{{character}}" id="">
+         <label for="{{character.name}}">{{character.name}}</label>
+        <input (change)="filterCharacters($event, character)" type="checkbox" value="{{character.name}}" name="{{character.name}}" id="">
     </li>
 </ul>
 <hr>
 <div *ngFor="let character of myCharacters">
-    {{character}}
+    {{character.name}}
 </div>

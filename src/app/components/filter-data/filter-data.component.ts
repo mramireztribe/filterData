@@ -26,16 +26,18 @@ export class FilterDataComponent implements OnInit {
   /* The filterCharacter() function Below gets called from the HTML page on the (change) event....it filters the data
      based off which "checkbox" the user clicked
   */
-  filterCharacters(e: any) {
+  filterCharacters(e: any, incomingCharacter: any) {
     console.clear()
-    console.warn("new data")
+    console.log("filterCharacters(e:any)", e)
     var nameToFilter = e.target.defaultValue
-    this.myCharacters = this._characterService.filterCharacters(e, nameToFilter, this.myCharacters)
-    this.displayedCharacters = this._characterService.filterCharacters(e, nameToFilter, this.myCharacters);
-    console.log("this.displayCharacters BEFORE calling the DS", this.displayedCharacters)
-    this.displayedCharacters = this.myCharacters;
-    console.log("this.displayCharacters AFTER calling the DS", this.displayedCharacters)
+    console.log("filtering by: ", nameToFilter)
+    this.myCharacters = this._characterService.filterCharacters(e, nameToFilter, this.myCharacters, incomingCharacter)
     console.log("this.myCharacters", this.myCharacters)
+    this.displayedCharacters = this._characterService.filterCharacters(e, nameToFilter, this.myCharacters, incomingCharacter);
+    this.displayedCharacters = this.myCharacters;
   }
 
+  clickSortFunction(tmc: any) {
+    var sortedData = this._characterService.sortData(tmc)
+  }
 }
