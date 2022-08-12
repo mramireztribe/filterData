@@ -9,7 +9,7 @@ export class SimpsonCharacterService {
 
   constructor() { }
 
-  // characters: any = ['Homer', 'Marge', 'Bart', 'Lisa', 'Maggie']
+
   characters: any = [
     {
       orderId: 4,
@@ -68,4 +68,10 @@ export class SimpsonCharacterService {
     var sortByData = tmc.sort((a: any, b: any) => a.orderId - b.orderId);
     return sortByData;
   }
+
+  loSort(){
+    
+  }
+
+
 }
