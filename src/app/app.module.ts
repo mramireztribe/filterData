@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { FilterDataComponent } from './components/filter-data/filter-data.component';
 import { SplitArrayComponent } from './components/split-array/split-array.component';
 import { SimpsonCharacterService } from './dataServices/simpson-character.service';
+import { LodashCustomizedFiltersComponent } from './components/lodash-customized-filters/lodash-customized-filters.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FilterDataComponent,
-    SplitArrayComponent
+    SplitArrayComponent,
+    LodashCustomizedFiltersComponent
   ],
   imports: [
     BrowserModule,
