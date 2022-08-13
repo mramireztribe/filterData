@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { SimpsonCharacterService } from 'src/app/dataServices/simpson-character.service';
 import * as _ from 'lodash';
 import { size } from 'lodash';
+import { ThrowStmt } from '@angular/compiler';
 
 @Component({
   selector: 'app-lodash-customized-filters',
@@ -20,6 +21,7 @@ export class LodashCustomizedFiltersComponent implements OnInit {
   dropWhileFilter: any;
   fillFilter: any;
   findIndexFilter: any;
+  headFilter: any;
 
   constructor(private _characterDataservice: SimpsonCharacterService) { }
 
@@ -38,5 +40,6 @@ export class LodashCustomizedFiltersComponent implements OnInit {
     this.dropWhileFilter = _.dropWhile(simpsonFamilyCharacters, ['gender', 'Male']); console.log("dropWhileFilter", this.dropWhileFilter);
     this.fillFilter = _.fill(simpsonFamilyCharacters, { orderId: 0, name: "Maggie", gender: "Female" }); console.log("fill Filter", this.fillFilter);
     this.findIndexFilter = _.findIndex(simpsonFamilyCharacters, { orderId: 3, name: "Bart", gender: "Male" }); console.log("this.findIndexFilter", this.findIndexFilter);
+    this.headFilter = _.head(simpsonFamilyCharacters); console.log("this.headFilter", this.headFilter);
   }
 }
