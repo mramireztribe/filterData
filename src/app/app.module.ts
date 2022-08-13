@@ -7,13 +7,15 @@ import { FilterDataComponent } from './components/filter-data/filter-data.compon
 import { SplitArrayComponent } from './components/split-array/split-array.component';
 import { SimpsonCharacterService } from './dataServices/simpson-character.service';
 import { LodashCustomizedFiltersComponent } from './components/lodash-customized-filters/lodash-customized-filters.component';
+import { AccordionItemsComponent } from './components/lodash-customized-filters/components/accordion-items/accordion-items.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FilterDataComponent,
     SplitArrayComponent,
-    LodashCustomizedFiltersComponent
+    LodashCustomizedFiltersComponent,
+    AccordionItemsComponent
   ],
   imports: [
     BrowserModule,

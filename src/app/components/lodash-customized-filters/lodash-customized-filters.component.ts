@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SimpsonCharacterService } from 'src/app/dataServices/simpson-character.service';
+import * as _ from 'lodash';
 
 @Component({
   selector: 'app-lodash-customized-filters',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LodashCustomizedFiltersComponent implements OnInit {
 
-  constructor() { }
+  defaultFilter: any;
+
+  constructor(private _characterDataservice: SimpsonCharacterService) { }
 
   ngOnInit(): void {
+    var data = this._characterDataservice.getAllCharacters();
+    this.defaultFilter = _.defaults(data)
+    // var filteredData = _.uniq(data);
+    console.log("this is the data", data)
   }
 
 }

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SimpsonCharacterService } from '../../dataServices/simpson-character.service';
+import * as _ from 'lodash';
 
 @Component({
   selector: 'app-split-array',
