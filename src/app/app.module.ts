@@ -15,7 +15,7 @@ import { AccordionItemsComponent } from './components/lodash-customized-filters/
     FilterDataComponent,
     SplitArrayComponent,
     LodashCustomizedFiltersComponent,
-    AccordionItemsComponent
+    AccordionItemsComponent,
   ],
   imports: [
     BrowserModule,
