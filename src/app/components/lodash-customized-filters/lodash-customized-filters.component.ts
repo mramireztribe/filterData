@@ -18,7 +18,7 @@ export class LodashCustomizedFiltersComponent implements OnInit {
   dropFilter: any;
   dropRightFilter: any;
   dropWhileFilter: any;
-  fillFilter:any;
+  fillFilter: any;
 
   constructor(private _characterDataservice: SimpsonCharacterService) { }
 
@@ -35,6 +35,6 @@ export class LodashCustomizedFiltersComponent implements OnInit {
     this.dropFilter = _.drop(data, 3); console.log("dropFilter", this.dropFilter)
     this.dropRightFilter = _.dropRight(data, 2); console.log("dropRightFilter", this.dropRightFilter)
     this.dropWhileFilter = _.dropWhile(data, ['gender', 'Male']); console.log("dropWhileFilter", this.dropWhileFilter)
-    this.fillFilter = _.fill(data, 'Maggie'); console.log("fill Filter", this.fillFilter)
+    this.fillFilter = _.fill(data, { orderId: 0, name: "Maggie", gender: "Female" }); console.log("fill Filter", this.fillFilter)
   }
 }

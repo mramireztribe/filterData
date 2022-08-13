@@ -151,5 +151,25 @@
         </div>
     </div>
 
+     <!-- Item 9 = _dropWhile -->
+     <div class="accordion-item">
+        <h2 class="accordion-header" id="headingNine">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine"
+                aria-expanded="true" aria-controls="collapseNine">
+                <div class="header">
+                    _.fill - filss data with whatever variable you pass <span class="working">working</span>
+                </div>
+            </button>
+        </h2>
+        <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingEight"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <div *ngFor="let character of fillFilter">
+                    {{character.name}}
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 </div>
