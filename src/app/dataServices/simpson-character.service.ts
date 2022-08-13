@@ -45,6 +45,13 @@ export class SimpsonCharacterService {
     return this.characters
   }
 
+  getEmptyCharacter(): any {
+    return {
+      orderId: 555,
+      name: ""
+    }
+  }
+
   filterCharacters(e: any, filteredCharacterName: any, myCharacters: any, incomingCharacter: any) {
     // console.log("DS: e", e)
     // console.log("DS: filteredCharacterName", filteredCharacterName)
@@ -69,8 +76,8 @@ export class SimpsonCharacterService {
     return sortByData;
   }
 
-  loSort(){
-    
+  loSort() {
+
   }
 
 
