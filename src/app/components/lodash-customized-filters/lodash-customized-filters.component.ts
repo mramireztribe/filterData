@@ -15,6 +15,10 @@ export class LodashCustomizedFiltersComponent implements OnInit {
   compactFilter: any;
   concatFilter: any;
   differenceFilter: any;
+  dropFilter: any;
+  dropRightFilter: any;
+  dropWhileFilter: any;
+  fillFilter:any;
 
   constructor(private _characterDataservice: SimpsonCharacterService) { }
 
@@ -28,5 +32,9 @@ export class LodashCustomizedFiltersComponent implements OnInit {
     this.compactFilter = _.compact(data); console.log("compactFilter", this.compactFilter);
     this.concatFilter = _.concat(data, { name: "Sideshow Bob", orderId: 555 }); console.log("concatFilter", this.concatFilter);
     this.differenceFilter = _.difference(twoFamiliesData.families, twoFamiliesData[0], twoFamiliesData[1]); console.log("differenceFilter", this.differenceFilter);
+    this.dropFilter = _.drop(data, 3); console.log("dropFilter", this.dropFilter)
+    this.dropRightFilter = _.dropRight(data, 2); console.log("dropRightFilter", this.dropRightFilter)
+    this.dropWhileFilter = _.dropWhile(data, ['gender', 'Male']); console.log("dropWhileFilter", this.dropWhileFilter)
+    this.fillFilter = _.fill(data, 'Maggie'); console.log("fill Filter", this.fillFilter)
   }
 }

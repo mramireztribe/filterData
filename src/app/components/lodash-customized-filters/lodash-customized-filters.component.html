@@ -81,7 +81,7 @@
             </div>
         </button>
         </h2>
-        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+        <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
         <div class="accordion-body">
             <div *ngFor="let character of concatFilter">
                 {{character.name}}
@@ -89,5 +89,67 @@
         </div>
         </div>
     </div>
+
+    <!-- Item 6 = _drop -->
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingSix">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix"
+                aria-expanded="true" aria-controls="collapseSix">
+                <div class="header">
+                    _.drop - removes items from the beginning  <span
+                        class="working">working</span>
+                </div>
+            </button>
+        </h2>
+        <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <div *ngFor="let character of dropFilter">
+                    {{character.name}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Item 7 = _dropRight -->
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingSeven">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven"
+                aria-expanded="true" aria-controls="collapseSeven">
+                <div class="header">
+                    _.dropRight - removes items from the end <span class="working">working</span>
+                </div>
+            </button>
+        </h2>
+        <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <div *ngFor="let character of dropRightFilter">
+                    {{character.name}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Item 8 = _dropWhile -->
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingEight">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight"
+                aria-expanded="true" aria-controls="collapseEight">
+                <div class="header">
+                    _.dropWhile - removes items from the beginning <span class="working">working</span>
+                </div>
+            </button>
+        </h2>
+        <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <div *ngFor="let character of dropWhileFilter">
+                    {{character.name}}
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 </div>

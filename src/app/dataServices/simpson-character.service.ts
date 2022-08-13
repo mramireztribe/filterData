@@ -13,27 +13,33 @@ export class SimpsonCharacterService {
   characters: any = [
     {
       orderId: 4,
-      name: "Homer"
+      name: "Homer",
+      gender: "Male"
     },
     {
       orderId: 1,
-      name: "Marge"
+      name: "Marge",
+      gender: "Female"
     },
     {
       orderId: 3,
-      name: "Bart"
+      name: "Bart",
+      gender: "Male"
     },
     {
       orderId: 2,
-      name: "Lisa"
+      name: "Lisa",
+      gender: "Female"
     },
     {
       orderId: 0,
-      name: "Maggie"
+      name: "Maggie",
+      gender: "Female"
     },
     {
       orderId: 0,
-      name: "Maggie"
+      name: "Maggie",
+      gender: "Female"
     }
   ]
 
@@ -43,27 +49,33 @@ export class SimpsonCharacterService {
         simpsons: [
           {
             orderId: 4,
-            name: "Homer"
+            name: "Homer",
+            gender: "Male"
           },
           {
             orderId: 1,
-            name: "Marge"
+            name: "Marge",
+            gender: "Female"
           },
           {
             orderId: 3,
-            name: "Bart"
+            name: "Bart",
+            gender: "Male"
           },
           {
             orderId: 2,
-            name: "Lisa"
+            name: "Lisa",
+            gender: "Female"
           },
           {
             orderId: 0,
-            name: "Maggie"
+            name: "Maggie",
+            gender: "Female"
           },
           {
             orderId: 0,
-            name: "Maggie"
+            name: "Maggie",
+            gender: "Female"
           }
         ]
       },
@@ -71,24 +83,29 @@ export class SimpsonCharacterService {
         flanders: [
           {
             orderId: 0,
-            name: "Ned"
+            name: "Ned",
+            gender: "Male"
           },
           {
             orderId: 1,
-            name: "Maude"
+            name: "Maude",
+            gender: "Female"
           },
           {
             orderId: 2,
-            name: "Rod"
+            name: "Rod",
+            gender: "Male"
           },
           {
             orderId: 3,
-            name: "Todd"
+            name: "Todd",
+            gender: "Male"
           },
           // BELOW LINE: just to test if homer is different. 
           {
             orderId: 4,
-            name: "Homer"
+            name: "Homer",
+            gender: "Male"
           },
         ]
       }
