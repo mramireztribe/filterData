@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-accordion-items',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./accordion-items.component.scss']
 })
 export class AccordionItemsComponent implements OnInit {
+
+  @Input() filter: any;
+  @Input() header: any;
 
   constructor() { }
 
