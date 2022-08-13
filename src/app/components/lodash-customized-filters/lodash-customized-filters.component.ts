@@ -26,6 +26,7 @@ export class LodashCustomizedFiltersComponent implements OnInit {
     // FIRST line below this comment (_.chunk) WORKS!!!! just cant loop through it the same way......because it chunks out multiple objects, still in order
     this.chunkFilter = _.chunk(data, 1); console.log("chunkFilter", this.chunkFilter);
     this.compactFilter = _.compact(data); console.log("compactFilter", this.compactFilter);
+    this.concatFilter = _.concat(data, { name: "Sideshow Bob", orderId: 555 }); console.log("concatFilter", this.concatFilter);
     this.differenceFilter = _.difference(twoFamiliesData, twoFamiliesData[0], twoFamiliesData[1]); console.log("differenceFilter", this.differenceFilter);
 
 
