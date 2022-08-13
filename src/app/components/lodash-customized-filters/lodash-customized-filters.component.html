@@ -151,7 +151,7 @@
         </div>
     </div>
 
-     <!-- Item 9 = _dropWhile -->
+     <!-- Item 9 = _fill -->
      <div class="accordion-item">
         <h2 class="accordion-header" id="headingNine">
             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine"
@@ -161,7 +161,7 @@
                 </div>
             </button>
         </h2>
-        <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingEight"
+        <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine"
             data-bs-parent="#accordionExample">
             <div class="accordion-body">
                 <div *ngFor="let character of fillFilter">
@@ -171,5 +171,22 @@
         </div>
     </div>
 
+     <!-- Item 10 = _findIndex -->
+     <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTen">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen"
+                aria-expanded="true" aria-controls="collapseNine">
+                <div class="header">
+                    _.findIndex - gets array index# of simpson chracters <span class="working">working</span>
+                </div>
+            </button>
+        </h2>
+        <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <div>{{findIndexFilter}}</div>
+            </div>
+        </div>
+    </div>
 
 </div>
