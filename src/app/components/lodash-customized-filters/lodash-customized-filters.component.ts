@@ -27,13 +27,6 @@ export class LodashCustomizedFiltersComponent implements OnInit {
     this.chunkFilter = _.chunk(data, 1); console.log("chunkFilter", this.chunkFilter);
     this.compactFilter = _.compact(data); console.log("compactFilter", this.compactFilter);
     this.concatFilter = _.concat(data, { name: "Sideshow Bob", orderId: 555 }); console.log("concatFilter", this.concatFilter);
-    this.differenceFilter = _.difference(twoFamiliesData, twoFamiliesData[0], twoFamiliesData[1]); console.log("differenceFilter", this.differenceFilter);
-
-
-
-
-    console.log("twoFamiliesData[0]", twoFamiliesData.simpsons);
-    console.log("twoFamiliesData[1]", twoFamiliesData.flanders);
-    console.log("the difference is", this.differenceFilter);
+    this.differenceFilter = _.difference(twoFamiliesData.families, twoFamiliesData[0], twoFamiliesData[1]); console.log("differenceFilter", this.differenceFilter);
   }
 }

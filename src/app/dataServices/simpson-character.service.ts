@@ -38,59 +38,61 @@ export class SimpsonCharacterService {
   ]
 
   splitCharacterFamilies: any = {
-    simpsons: [
+    families: [
       {
-        orderId: 4,
-        name: "Homer"
+        simpsons: [
+          {
+            orderId: 4,
+            name: "Homer"
+          },
+          {
+            orderId: 1,
+            name: "Marge"
+          },
+          {
+            orderId: 3,
+            name: "Bart"
+          },
+          {
+            orderId: 2,
+            name: "Lisa"
+          },
+          {
+            orderId: 0,
+            name: "Maggie"
+          },
+          {
+            orderId: 0,
+            name: "Maggie"
+          }
+        ]
       },
       {
-        orderId: 1,
-        name: "Marge"
-      },
-      {
-        orderId: 3,
-        name: "Bart"
-      },
-      {
-        orderId: 2,
-        name: "Lisa"
-      },
-      {
-        orderId: 0,
-        name: "Maggie"
-      },
-      {
-        orderId: 0,
-        name: "Maggie"
+        flanders: [
+          {
+            orderId: 0,
+            name: "Ned"
+          },
+          {
+            orderId: 1,
+            name: "Maude"
+          },
+          {
+            orderId: 2,
+            name: "Rod"
+          },
+          {
+            orderId: 3,
+            name: "Todd"
+          },
+          // BELOW LINE: just to test if homer is different. 
+          {
+            orderId: 4,
+            name: "Homer"
+          },
+        ]
       }
     ],
-    flanders: [
-      {
-        orderId: 0,
-        name: "Ned"
-      },
-      {
-        orderId: 1,
-        name: "Maude"
-      },
-      {
-        orderId: 2,
-        name: "Ned"
-      },
-      {
-        orderId: 3,
-        name: "Rod"
-      },
-      {
-        orderId: 4,
-        name: "Todd"
-      },
-      // BELOW LINE: just to test if homer is different. 
-      {
-        orderId: 4,
-        name: "Homer"
-      },
-    ]
   };
 
 
