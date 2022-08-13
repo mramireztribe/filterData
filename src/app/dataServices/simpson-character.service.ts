@@ -36,6 +36,64 @@ export class SimpsonCharacterService {
       name: "Maggie"
     }
   ]
+
+  splitCharacterFamilies: any = {
+    simpsons: [
+      {
+        orderId: 4,
+        name: "Homer"
+      },
+      {
+        orderId: 1,
+        name: "Marge"
+      },
+      {
+        orderId: 3,
+        name: "Bart"
+      },
+      {
+        orderId: 2,
+        name: "Lisa"
+      },
+      {
+        orderId: 0,
+        name: "Maggie"
+      },
+      {
+        orderId: 0,
+        name: "Maggie"
+      }
+    ],
+    flanders: [
+      {
+        orderId: 0,
+        name: "Ned"
+      },
+      {
+        orderId: 1,
+        name: "Maude"
+      },
+      {
+        orderId: 2,
+        name: "Ned"
+      },
+      {
+        orderId: 3,
+        name: "Rod"
+      },
+      {
+        orderId: 4,
+        name: "Todd"
+      },
+      // BELOW LINE: just to test if homer is different. 
+      {
+        orderId: 4,
+        name: "Homer"
+      },
+    ]
+  };
+
+
   filteredCharacters: any = [];
   filteredCharacters2: any = [];
   x: any
@@ -43,6 +101,10 @@ export class SimpsonCharacterService {
 
   getAllCharacters(): any {
     return this.characters
+  }
+
+  getTwoFamilies(): any {
+    return this.splitCharacterFamilies;
   }
 
   getEmptyCharacter(): any {

@@ -1,10 +1,11 @@
+<div class="warning-message">use console for help....console all variables</div>
 <div class="accordion" id="accordionExample">
     <!-- Item 1 = _default -->
     <div class="accordion-item">
     <h2 class="accordion-header" id="headingOne">
         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
         <div class="header">
-            _.Default
+            _.cefault
         </div>
         </button>
     </h2>
@@ -22,7 +23,7 @@
         <h2 class="accordion-header" id="headingOne">
         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
             <div class="header">
-                _.Chunk
+                _.chunk <span class="re-alter-to-display-correctly">...needs to be re-constructed to display correctly</span>
             </div>
         </button>
         </h2>
@@ -40,7 +41,7 @@
         <h2 class="accordion-header" id="headingThree">
         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
             <div class="header">
-                _.Compact
+                _.compact
             </div>
         </button>
         </h2>
@@ -56,9 +57,27 @@
      <!-- Item 4 = _concat -->
      <div class="accordion-item">
         <h2 class="accordion-header" id="headingFour">
-        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseThree">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
             <div class="header">
-                _.Concat - Adds "Sideshow Bob" to list of Characters....
+                _.concat - Adds "Sideshow Bob" to list of Characters....
+            </div>
+        </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+            <div *ngFor="let character of concatFilter">
+                {{character.name}}
+            </div>
+        </div>
+        </div>
+    </div>
+
+    <!-- Item 5 = _difference -->
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFive">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+            <div class="header">
+                _.difference - Compares 2 arrays (simpsons vs flanders, the difference?) <span class="not-working">...Not Working</span>
             </div>
         </button>
         </h2>
