@@ -35,19 +35,13 @@ var AllCharactersTableComponent = /** @class */ (function () {
         }
     };
     AllCharactersTableComponent.prototype.sortByOrderId = function () {
-        console.log("allCharacters", this.allCharacters);
         var sortedData = this.allCharacters.sort(function (a, b) { return (a.orderId > b.orderId) ? 1 : -1; });
-        console.log("sortedData", sortedData);
     };
     AllCharactersTableComponent.prototype.sortByName = function () {
-        console.log("allCharacters", this.allCharacters);
         var sortedData = this.allCharacters.sort(function (a, b) { return (a.name > b.name) ? 1 : -1; });
-        console.log("sortedData", sortedData);
     };
     AllCharactersTableComponent.prototype.sortByGender = function () {
-        console.log("allCharacters", this.allCharacters);
         var sortedData = this.allCharacters.sort(function (a, b) { return (a.gender > b.gender) ? 1 : -1; });
-        console.log("sortedData", sortedData);
     };
     __decorate([
         core_1.Input()

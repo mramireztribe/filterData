@@ -45,21 +45,15 @@ export class AllCharactersTableComponent implements OnInit {
   }
 
   sortByOrderId() {
-    console.log("allCharacters", this.allCharacters)
     var sortedData = this.allCharacters.sort((a: any, b: any) => (a.orderId > b.orderId) ? 1 : -1);
-    console.log("sortedData", sortedData);
   }
 
   sortByName() {
-    console.log("allCharacters", this.allCharacters)
     var sortedData = this.allCharacters.sort((a: any, b: any) => (a.name > b.name) ? 1 : -1);
-    console.log("sortedData", sortedData);
   }
 
   sortByGender() {
-    console.log("allCharacters", this.allCharacters)
     var sortedData = this.allCharacters.sort((a: any, b: any) => (a.gender > b.gender) ? 1 : -1);
-    console.log("sortedData", sortedData);
   }
 
 }
