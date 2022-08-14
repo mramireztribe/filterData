@@ -14,6 +14,16 @@ export class SimpsonCharacterService {
 
   characters: any = [
     {
+      orderId: 6,
+      name: "Snowball",
+      gender: ""
+    },
+    {
+      orderId: 7,
+      name: "Jimbo",
+      gender: "Male"
+    },
+    {
       orderId: 4,
       name: "Homer",
       gender: "Male"

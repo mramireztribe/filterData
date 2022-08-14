@@ -15,6 +15,16 @@ var SimpsonCharacterService = /** @class */ (function () {
         this.superBasiCharacters = [1, 2, 3, 4, 5];
         this.characters = [
             {
+                orderId: 6,
+                name: "Snowball",
+                gender: ""
+            },
+            {
+                orderId: 7,
+                name: "Jimbo",
+                gender: "Male"
+            },
+            {
                 orderId: 4,
                 name: "Homer",
                 gender: "Male"

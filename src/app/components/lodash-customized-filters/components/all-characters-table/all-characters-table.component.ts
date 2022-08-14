@@ -20,6 +20,7 @@ export class AllCharactersTableComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
   showData() {
@@ -44,15 +45,21 @@ export class AllCharactersTableComponent implements OnInit {
   }
 
   sortByOrderId() {
-    alert("sorting by orderId");
+    console.log("allCharacters", this.allCharacters)
+    var sortedData = this.allCharacters.sort((a: any, b: any) => (a.orderId > b.orderId) ? 1 : -1);
+    console.log("sortedData", sortedData);
   }
 
   sortByName() {
-    alert("sorting by name");
+    console.log("allCharacters", this.allCharacters)
+    var sortedData = this.allCharacters.sort((a: any, b: any) => (a.name > b.name) ? 1 : -1);
+    console.log("sortedData", sortedData);
   }
 
   sortByGender() {
-    alert("sorting by gender");
+    console.log("allCharacters", this.allCharacters)
+    var sortedData = this.allCharacters.sort((a: any, b: any) => (a.gender > b.gender) ? 1 : -1);
+    console.log("sortedData", sortedData);
   }
 
 }
