@@ -13,7 +13,7 @@ ul.nav-tabs li.nav-item {
 ul.nav-tabs li.nav-item button {
   color: black;
   text-shadow: 2px 2px 4px #ffffff;
-  background-color: skyblue;
+  background-color: rgb(135, 206, 235);
   border-top: 2px dashed white;
   border-left: 2px dashed white;
   border-right: 2px dashed white;
@@ -94,7 +94,7 @@ div.tab-content div.tab-pane .all-characters-table tr.data-rows {
   border: 0px !important;
 }
 div.tab-content div.tab-pane .all-characters-table tr.data-rows:hover {
-  background-color: #c8b028;
+  background-color: rgb(200, 176, 40);
 }
 div.tab-content div.tab-pane .all-characters-table tr.data-rows td {
   font-size: 0.85em;
@@ -115,4 +115,4 @@ div.tab-content div.tab-pane .all-characters-table tr.data-rows td.order-id {
 
 .simpson {
   font-family: myFirstFont;
-}
+}/*# sourceMappingURL=all-characters-table.component.css.map */

@@ -3,7 +3,7 @@
         <button class="btn is-table-shown" (click)="showData()">
             <span *ngIf="!isTableShown; else showOtherButton">Show Original Simpson Character Data?</span>
             <ng-template #showOtherButton>
-                <span >Hide Original Simpson Character Data?</span>
+                <span>Hide Original Simpson Character Data?</span>
             </ng-template>
         </button>
     </div>
@@ -11,20 +11,23 @@
 
 <!-- Nav tabs -->
 <ul *ngIf="isTableShown" class="nav nav-tabs" id="myTab" role="tablist">
-  <li class="nav-item" role="presentation">
-    <button class="simpson nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">All Characters</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="simpson nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Two Families</button>
-  </li>
-  <li class="nav-item" role="presentation">
-    <button class="simpson nav-link" id="messages-tab" data-bs-toggle="tab" data-bs-target="#messages" type="button" role="tab" aria-controls="messages" aria-selected="false">Names Only Array</button>
-  </li>
+    <li class="nav-item" role="presentation">
+        <button class="simpson nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button"
+            role="tab" aria-controls="home" aria-selected="true">All Characters</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="simpson nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button"
+            role="tab" aria-controls="profile" aria-selected="false">Two Families</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="simpson nav-link" id="messages-tab" data-bs-toggle="tab" data-bs-target="#messages" type="button"
+            role="tab" aria-controls="messages" aria-selected="false">Names Only Array</button>
+    </li>
 </ul>
 
 <!-- Tab panes -->
 <div *ngIf="isTableShown" class="tab-content">
-    <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab"> 
+    <div class="tab-pane active" id="home" role="tabpanel" aria-labelledby="home-tab">
         <table class="all-characters-table">
             <tr class="header-row">
                 <th (click)="sortByOrderId()" class="order-id">orderId</th>
@@ -32,7 +35,8 @@
                 <th (click)="sortByGender()" class="gender">Gender</th>
             </tr>
             <tr class="data-rows" *ngFor="let character of allCharacters; let i = index">
-                <td [ngClass]="styleSelectedCell(i)" (click)="tableCellClicked($event, i)" class="border order-id">{{character.orderId}}</td>
+                <td [ngClass]="styleSelectedCell(i)" (click)="tableCellClicked($event, i)" class="border order-id">
+                    {{character.orderId}}</td>
                 <td (click)="tableCellClicked($event, i)" class="border">{{character.name}}</td>
                 <td (click)="tableCellClicked($event, i)" class="border">{{character.gender}}</td>
             </tr>
@@ -45,5 +49,11 @@
             </tr>
         </table>
     </div>
-    <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab"> messages </div>
+    <div class="tab-pane" id="messages" role="tabpanel" aria-labelledby="messages-tab">
+        <table class="table no-data">
+            <tr>
+                <td>DOH!!!</td>
+            </tr>
+        </table>
+    </div>
 </div>

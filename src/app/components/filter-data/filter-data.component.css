@@ -1,0 +1,19 @@
+ul.character-checkboxes {
+  margin: 0;
+  padding: 0;
+}
+ul.character-checkboxes li {
+  list-style-type: none;
+  display: inline-block;
+  margin-right: 10px;
+}
+ul.character-checkboxes li input {
+  margin-right: 5px;
+}
+
+div.character-wrapper-filter-data-component {
+  display: flex;
+}
+div.character-wrapper-filter-data-component div.characters {
+  margin-right: 10px;
+}/*# sourceMappingURL=filter-data.component.css.map */
