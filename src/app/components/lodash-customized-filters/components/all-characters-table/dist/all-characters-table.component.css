@@ -18,10 +18,16 @@ ul.nav-tabs li.nav-item button {
   border-left: 2px dashed white;
   border-right: 2px dashed white;
 }
+ul.nav-tabs li.nav-item button:hover {
+  background-color: #76b4cd;
+}
 ul.nav-tabs li.nav-item button.active {
   background-color: gold;
   color: white;
   text-shadow: 2px 2px 4px #000000;
+}
+ul.nav-tabs li.nav-item button.active:hover {
+  background-color: #dac341;
 }
 
 div.show-data {

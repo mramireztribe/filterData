@@ -18,12 +18,20 @@ ul.nav-tabs{
             border-top:2px dashed white;
             border-left:2px dashed white;
             border-right:2px dashed white;
+            
+            &:hover{ 
+                background-color: #76b4cd;
+             }
         }
 
         button.active{
             background-color:gold;
             color:white;
             text-shadow: 2px 2px 4px #000000;
+
+            &:hover{
+                background-color: #dac341;
+            }
         }
     }
 }
