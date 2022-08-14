@@ -9,6 +9,8 @@ export class SimpsonCharacterService {
 
   constructor() { }
 
+  basicCharacters: any = ['Homer', 'Marge', 'Bart', 'Lisa', 'Maggie']
+  superBasiCharacters: any = [1, 2, 3, 4, 5]
 
   characters: any = [
     {
@@ -120,6 +122,10 @@ export class SimpsonCharacterService {
 
   getAllCharacters(): any {
     return this.characters
+  }
+
+  getAllBasicCharacters(): any {
+    return this.basicCharacters;
   }
 
   getTwoFamilies(): any {

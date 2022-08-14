@@ -22,12 +22,15 @@ export class LodashCustomizedFiltersComponent implements OnInit {
   fillFilter: any;
   findIndexFilter: any;
   headFilter: any;
+  indexOfFilter: any;
 
   constructor(private _characterDataservice: SimpsonCharacterService) { }
 
   ngOnInit(): void {
     var simpsonFamilyCharacters = this._characterDataservice.getAllCharacters();
     var twoFamiliesData = this._characterDataservice.getTwoFamilies(); console.log("two families", twoFamiliesData);
+    var allCharacters = this._characterDataservice.getAllCharacters();
+    console.log("yadda", allCharacters);
 
     this.defaultFilter = _.defaults(simpsonFamilyCharacters); console.log("defaultFilter", this.defaultFilter);
     // FIRST line below this comment (_.chunk) WORKS!!!! just cant loop through it the same way......because it chunks out multiple objects, still in order
@@ -38,8 +41,11 @@ export class LodashCustomizedFiltersComponent implements OnInit {
     this.dropFilter = _.drop(simpsonFamilyCharacters, 3); console.log("dropFilter", this.dropFilter);
     this.dropRightFilter = _.dropRight(simpsonFamilyCharacters, 2); console.log("dropRightFilter", this.dropRightFilter)
     this.dropWhileFilter = _.dropWhile(simpsonFamilyCharacters, ['gender', 'Male']); console.log("dropWhileFilter", this.dropWhileFilter);
-    this.fillFilter = _.fill(simpsonFamilyCharacters, { orderId: 0, name: "Maggie", gender: "Female" }); console.log("fill Filter", this.fillFilter);
+    // this.fillFilter = _.fill(simpsonFamilyCharacters, { orderId: 0, name: "Maggie", gender: "Female" }); console.log("fill Filter", this.fillFilter);
     this.findIndexFilter = _.findIndex(simpsonFamilyCharacters, { orderId: 3, name: "Bart", gender: "Male" }); console.log("this.findIndexFilter", this.findIndexFilter);
     this.headFilter = _.head(simpsonFamilyCharacters); console.log("this.headFilter", this.headFilter);
+    console.log("sfc", allCharacters);
+    this.indexOfFilter = _.indexOf(allCharacters, { orderId: 3, name: "Bart", gender: "Male" }, 0); console.log("this.indexOfFilter", allCharacters)
+    console.log("this.indexOfFilterddd", this.indexOfFilter);
   }
 }
