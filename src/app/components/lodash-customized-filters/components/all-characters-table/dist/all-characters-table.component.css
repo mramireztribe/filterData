@@ -1,0 +1,118 @@
+@font-face {
+  font-family: myFirstFont;
+  src: url("../../../../../assets/fonts/Simpsonfont.otf");
+}
+ul.nav-tabs {
+  padding-left: 25px;
+  border-bottom: 7px solid black;
+}
+ul.nav-tabs li.nav-item {
+  background-color: #f14e28;
+  border-color: gold;
+}
+ul.nav-tabs li.nav-item button {
+  color: black;
+  text-shadow: 2px 2px 4px #ffffff;
+  background-color: skyblue;
+  border-top: 2px dashed black;
+  border-left: 2px dashed black;
+  border-right: 2px dashed black;
+}
+ul.nav-tabs li.nav-item button.active {
+  background-color: gold;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+div.show-data {
+  width: 100%;
+}
+div.show-data div.show-data-info {
+  width: 50%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+div.show-data div.show-data-info button {
+  font-weight: bold;
+  font-size: 1.4em;
+  border: 4px solid gold;
+  width: 100%;
+  background-color: skyblue;
+  margin: 0 auto;
+  font-family: myFirstFont;
+  text-shadow: 2px 2px 3px #ffffff;
+}
+div.show-data div.show-data-info button:hover {
+  background-color: gold;
+  color: skyblue;
+  border: 4px solid skyblue;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+div.tab-content {
+  padding: 20px 0;
+  background-color: #c5eb53;
+}
+div.tab-content div.tab-pane table {
+  border: 1px solid black;
+  margin: auto auto;
+  width: 30%;
+  color: white;
+}
+div.tab-content div.tab-pane table.no-data {
+  font-family: myFirstFont;
+  color: red;
+  text-shadow: 2px 2px 5px #000000;
+  font-size: 1.5em;
+}
+div.tab-content div.tab-pane table.no-data:after {
+  content: "No Data to Show....";
+  color: white;
+}
+div.tab-content div.tab-pane .all-characters-table tr.header-row {
+  background-color: skyblue;
+  text-shadow: 0 0 3px black;
+  font-size: 1.2em;
+  font-weight: 900;
+  font-family: myFirstFont;
+  border-top: 4px solid black;
+  border-bottom: 4px solid black;
+  cursor: pointer;
+}
+div.tab-content div.tab-pane .all-characters-table tr.header-row th {
+  border: 2px solid black;
+}
+div.tab-content div.tab-pane .all-characters-table tr.header-row th.order-id, div.tab-content div.tab-pane .all-characters-table tr.header-row th.name, div.tab-content div.tab-pane .all-characters-table tr.header-row th.gender {
+  padding-left: 5px;
+}
+div.tab-content div.tab-pane .all-characters-table tr.data-rows {
+  background-color: gold;
+  text-shadow: 0 0 3px black;
+  font-size: 1.1em;
+  font-weight: 900;
+  font-family: myFirstFont;
+  border: 0px !important;
+}
+div.tab-content div.tab-pane .all-characters-table tr.data-rows:hover {
+  background-color: #c8b028;
+}
+div.tab-content div.tab-pane .all-characters-table tr.data-rows td {
+  font-size: 0.85em;
+  border: 0px !important;
+  border-top: 1px solid white !important;
+  padding-left: 10px;
+}
+div.tab-content div.tab-pane .all-characters-table tr.data-rows td:hover {
+  background-color: lightseagreen;
+  border: 1px dashed green;
+}
+div.tab-content div.tab-pane .all-characters-table tr.data-rows td .active {
+  color: red;
+}
+div.tab-content div.tab-pane .all-characters-table tr.data-rows td.order-id {
+  padding-left: 10px;
+}
+
+.simpson {
+  font-family: myFirstFont;
+}

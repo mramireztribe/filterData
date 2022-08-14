@@ -8,6 +8,7 @@ import { SplitArrayComponent } from './components/split-array/split-array.compon
 import { SimpsonCharacterService } from './dataServices/simpson-character.service';
 import { LodashCustomizedFiltersComponent } from './components/lodash-customized-filters/lodash-customized-filters.component';
 import { AccordionItemsComponent } from './components/lodash-customized-filters/components/accordion-items/accordion-items.component';
+import { AllCharactersTableComponent } from './components/lodash-customized-filters/components/all-characters-table/all-characters-table.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { AccordionItemsComponent } from './components/lodash-customized-filters/
     SplitArrayComponent,
     LodashCustomizedFiltersComponent,
     AccordionItemsComponent,
+    AllCharactersTableComponent,
   ],
   imports: [
     BrowserModule,

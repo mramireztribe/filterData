@@ -1,0 +1,23 @@
+div.app-wrapper {
+  height: 100%;
+}
+div.app-wrapper div.sticky {
+  position: sticky;
+  top: 0;
+}
+div.app-wrapper div.sticky-wrapper div.title {
+  font-size: 1.5em;
+  width: 100%;
+  margin: 0 auto;
+  padding: 10px 0;
+  text-align: center;
+  color: white;
+  background-color: gold;
+  text-shadow: 2px 2px 4px #000000;
+}
+div.app-wrapper div.sticky-wrapper div.title span:hover {
+  color: skyblue;
+}
+div.app-wrapper div.customized-filters {
+  background-color: #f14e28;
+}

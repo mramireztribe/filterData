@@ -42,7 +42,12 @@ export class SimpsonCharacterService {
       orderId: 0,
       name: "Maggie",
       gender: "Female"
-    }
+    }, // Used for dupicates
+    {
+      orderId: 5,
+      name: "Santas Little Helper",
+      gender: null
+    },
   ]
 
   splitCharacterFamilies: any = {

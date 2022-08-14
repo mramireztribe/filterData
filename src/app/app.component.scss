@@ -1,3 +1,31 @@
-.app-filter-data{
-    background-color:#0a0;
+div.app-wrapper{
+    height:100%;
+    div.sticky{
+        position: sticky;
+        top: 0;
+    }
+
+    div.sticky-wrapper{
+        div.title{
+            font-size:1.5em;
+            width:100%;
+            margin: 0 auto;
+            padding: 10px 0;
+            text-align: center;
+            color:white;
+            background-color: gold;
+            text-shadow: 2px 2px 4px #000000;
+    
+            span{
+    
+                &:hover{
+                color:skyblue;
+            }
+            }
+        }
+    }
+
+    div.customized-filters{
+        background-color:#f14e28;
+    }
 }
