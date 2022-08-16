@@ -85,13 +85,16 @@ span.not-working{
     font-weight:bold;
     color:red;
     font-family:simpsonFont;
+    text-shadow: 2px 2px 3px #000000;
+    letter-spacing: 3px;
 }
 span.working{
     font-size:1.5em;
     font-weight:bold;
     color:green;
     font-family:simpsonFont;
-    background-image: url('https://icons.iconarchive.com/icons/jonathan-rey/simpsons/256/Homer-Simpson-04-Happy-icon.png');
+    text-shadow: 2px 2px 3px #000000;
+    letter-spacing: 3px;
 }
 
 span.re-construct{
@@ -99,6 +102,8 @@ span.re-construct{
     font-weight:bold;
     color:gold;
     font-family:simpsonFont;
+    text-shadow: 2px 2px 3px #000000;
+    letter-spacing: 3px;
 }
 
 .intersection-family{

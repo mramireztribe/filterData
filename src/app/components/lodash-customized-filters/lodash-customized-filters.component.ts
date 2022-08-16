@@ -32,6 +32,7 @@ export class LodashCustomizedFiltersComponent implements OnInit {
   joinFilter: any;
   lastFilter: any;
   lastIndexOfFilter: any;
+  nthFilter: any;
 
 
   constructor(private _characterDataservice: SimpsonCharacterService) { }
@@ -69,7 +70,7 @@ export class LodashCustomizedFiltersComponent implements OnInit {
     this.lastIndexOfFilter = _.lastIndexOf([1, 2, 1, 2], 1); console.log("_lastIndexOf([1,2,1,2],1)", this.lastIndexOfFilter)
     console.log("this.basicCharacters", this.basicCharacters);
     this.lastIndexOfFilter = _.lastIndexOf(this.basicCharacters, 'Bart'); console.log("_lastIndexOf(this.basicCharacters)", this.lastIndexOfFilter)
-
+    this.nthFilter = _.nth(this.allCharacters, 5); console.log("_nth(this.nthFilter)", this.nthFilter); console.log("_nth(this.allCharacters)", this.allCharacters)
   }
 
   newFunctionToDo(e: any) {

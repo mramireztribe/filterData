@@ -64,6 +64,9 @@ var LodashCustomizedFiltersComponent = /** @class */ (function () {
         console.log("this.basicCharacters", this.basicCharacters);
         this.lastIndexOfFilter = _.lastIndexOf(this.basicCharacters, 'Bart');
         console.log("_lastIndexOf(this.basicCharacters)", this.lastIndexOfFilter);
+        this.nthFilter = _.nth(this.allCharacters, 5);
+        console.log("_nth(this.nthFilter)", this.nthFilter);
+        console.log("_nth(this.allCharacters)", this.allCharacters);
     };
     LodashCustomizedFiltersComponent.prototype.newFunctionToDo = function (e) {
         console.log("event", e);
