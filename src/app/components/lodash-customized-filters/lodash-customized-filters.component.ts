@@ -12,6 +12,8 @@ import { ThrowStmt } from '@angular/compiler';
 export class LodashCustomizedFiltersComponent implements OnInit {
 
   allCharacters: any;
+  basicTwoFamilyCharacters: any;
+  basicCharacters: any;
 
   defaultFilter: any;
   chunkFilter: any;
@@ -25,18 +27,26 @@ export class LodashCustomizedFiltersComponent implements OnInit {
   findIndexFilter: any;
   headFilter: any;
   indexOfFilter: any;
+  initialFilter: any;
+  intersectionFilter: any;
+  joinFilter: any;
+  lastFilter: any;
+  lastIndexOfFilter: any;
+
 
   constructor(private _characterDataservice: SimpsonCharacterService) { }
 
   ngOnInit(): void {
     // For top tables
     this.allCharacters = this._characterDataservice.getAllCharacters();
+    this.basicCharacters = this._characterDataservice.getAllBasicCharacters(); console.log("basic characters", this.basicCharacters);
 
 
     var simpsonFamilyCharacters = this._characterDataservice.getAllCharacters();
     var twoFamiliesData = this._characterDataservice.getTwoFamilies(); console.log("two families", twoFamiliesData);
     var allCharacters = this._characterDataservice.getAllCharacters();
-    console.log("yadda", allCharacters);
+    var basicTwoFamilyCharacters = this._characterDataservice.getBasicTwoFamilyData(); this.basicTwoFamilyCharacters = basicTwoFamilyCharacters;
+    console.log("tester for new variables", basicTwoFamilyCharacters);
 
     this.defaultFilter = _.defaults(simpsonFamilyCharacters); console.log("_.defaults(simpsonFamilyCharacters)", this.defaultFilter);
     // FIRST line below this comment (_.chunk) WORKS!!!! just cant loop through it the same way......because it chunks out multiple objects, still in order
@@ -50,6 +60,19 @@ export class LodashCustomizedFiltersComponent implements OnInit {
     // this.fillFilter = _.fill(simpsonFamilyCharacters, { orderId: 0, name: "Maggie", gender: "Female" }); console.log("fill Filter", this.fillFilter);
     this.findIndexFilter = _.findIndex(simpsonFamilyCharacters, { orderId: 3, name: "Bart", gender: "Male" }); console.log("_.findIndex(simpsonFamilyCharacters, { orderId: 3, name: 'Bart', gender: 'Male' })", this.findIndexFilter);
     this.headFilter = _.head(simpsonFamilyCharacters); console.log("_.head(simpsonFamilyCharacters)", this.headFilter);
-    this.indexOfFilter = _.indexOf(allCharacters, { orderId: 3, name: "Bart", gender: "Male" }, 0); console.log(" _.indexOf(allCharacters, { orderId: 3, name: 'Bart', gender: 'Male' }, 0)", allCharacters)
+    this.indexOfFilter = _.indexOf(allCharacters, { orderId: 3, name: "Bart", gender: "Male" }); console.log(" _.indexOf(allCharacters)", this.indexOfFilter);
+    this.initialFilter = _.initial(allCharacters); console.log(" _.initial(allCharacters)", this.initialFilter);
+    this.intersectionFilter = _.intersection(basicTwoFamilyCharacters[0], basicTwoFamilyCharacters[1]); console.log(" _.intersection(allCharacters, twoFamiliesData)", this.intersectionFilter);
+    this.joinFilter = _.join(this.basicCharacters, " is a Simpson! "); console.log("_join(this.basicCharacters)", this.joinFilter)
+    this.lastFilter = _.last(allCharacters); console.log("_last(allCharacters)", this.lastFilter)
+    this.lastIndexOfFilter = _.lastIndexOf([1, 2, 1, 2], 2); console.log("_lastIndexOf([1,2,1,2],2)", this.lastIndexOfFilter)
+    this.lastIndexOfFilter = _.lastIndexOf([1, 2, 1, 2], 1); console.log("_lastIndexOf([1,2,1,2],1)", this.lastIndexOfFilter)
+    console.log("this.basicCharacters", this.basicCharacters);
+    this.lastIndexOfFilter = _.lastIndexOf(this.basicCharacters, 'Bart'); console.log("_lastIndexOf(this.basicCharacters)", this.lastIndexOfFilter)
+
+  }
+
+  newFunctionToDo(e: any) {
+    console.log("event", e)
   }
 }

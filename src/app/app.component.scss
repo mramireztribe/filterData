@@ -1,3 +1,10 @@
+@font-face {
+    font-family: simpsonFont;
+    src: url('../assets/fonts/Simpsonfont.otf');
+}
+
+.simpson{font-family:simpsonFont}
+
 div.app-wrapper{
     height:100%;
     div.sticky{

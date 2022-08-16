@@ -55,5 +55,4 @@ export class AllCharactersTableComponent implements OnInit {
   sortByGender() {
     var sortedData = this.allCharacters.sort((a: any, b: any) => (a.gender > b.gender) ? 1 : -1);
   }
-
 }

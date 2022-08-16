@@ -9,8 +9,10 @@ export class SimpsonCharacterService {
 
   constructor() { }
 
-  basicCharacters: any = ['Homer', 'Marge', 'Bart', 'Lisa', 'Maggie']
-  superBasiCharacters: any = [1, 2, 3, 4, 5]
+  basicCharacters: any = ['Homer', 'Marge', 'Bart', 'Lisa', 'Maggie', 'Bart']; // Used 2 'Bart's' for _lastIndexOf filter. 
+  //FOR BELOW LINE: Homer, Bart and Lisa (in the flanders family) is used in the _intersection filter
+  basicTwoFamilyCharacters = [['Homer', 'Marge', 'Bart', 'Lisa', 'Maggie'], ['Ned', 'Maude', 'Rod', 'Tod', 'Homer', 'Bart', 'Lisa']]
+  superBasiCharacters: any = [1, 2, 3, 4, 5];
 
   characters: any = [
     {
@@ -152,6 +154,10 @@ export class SimpsonCharacterService {
       orderId: 555,
       name: ""
     }
+  }
+
+  getBasicTwoFamilyData(): any {
+    return this.basicTwoFamilyCharacters;
   }
 
   filterCharacters(e: any, filteredCharacterName: any, myCharacters: any, incomingCharacter: any) {

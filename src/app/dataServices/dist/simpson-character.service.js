@@ -11,7 +11,9 @@ var core_1 = require("@angular/core");
 // import { ICharacter } from '../dataModels/simpson-character/simpson-character.module'
 var SimpsonCharacterService = /** @class */ (function () {
     function SimpsonCharacterService() {
-        this.basicCharacters = ['Homer', 'Marge', 'Bart', 'Lisa', 'Maggie'];
+        this.basicCharacters = ['Homer', 'Marge', 'Bart', 'Lisa', 'Maggie', 'Bart']; // Used 2 'Bart's' for _lastIndexOf filter. 
+        //FOR BELOW LINE: Homer, Bart and Lisa (in the flanders family) is used in the _intersection filter
+        this.basicTwoFamilyCharacters = [['Homer', 'Marge', 'Bart', 'Lisa', 'Maggie'], ['Ned', 'Maude', 'Rod', 'Tod', 'Homer', 'Bart', 'Lisa']];
         this.superBasiCharacters = [1, 2, 3, 4, 5];
         this.characters = [
             {
@@ -145,6 +147,9 @@ var SimpsonCharacterService = /** @class */ (function () {
             orderId: 555,
             name: ""
         };
+    };
+    SimpsonCharacterService.prototype.getBasicTwoFamilyData = function () {
+        return this.basicTwoFamilyCharacters;
     };
     SimpsonCharacterService.prototype.filterCharacters = function (e, filteredCharacterName, myCharacters, incomingCharacter) {
         // console.log("DS: e", e)

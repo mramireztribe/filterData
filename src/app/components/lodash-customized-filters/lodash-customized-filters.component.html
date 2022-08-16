@@ -1,5 +1,6 @@
 <app-all-characters-table [allCharacters]="allCharacters"></app-all-characters-table>
 <div class="accordion" id="accordionExample">
+
     <!-- Item 1 = _default -->
     <div class="accordion-item">
     <h2 class="accordion-header" id="headingOne">
@@ -175,7 +176,7 @@
     <div class="accordion-item">
     <h2 class="accordion-header" id="headingTen">
         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen"
-            aria-expanded="true" aria-controls="collapseNine">
+            aria-expanded="true" aria-controls="collapseTen">
             <div class="header">
                 _.findIndex - gets array index# of simpson chracters <span class="working">Working</span>
             </div>
@@ -193,7 +194,7 @@
     <div class="accordion-item">
     <h2 class="accordion-header" id="headingEleven">
         <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven"
-            aria-expanded="true" aria-controls="collapseNine">
+            aria-expanded="true" aria-controls="collapseEleven">
             <div class="header">
                 _.head - gets first Item in array<span class="working"> Working</span>
             </div>
@@ -205,5 +206,150 @@
             <div><pre>{{headFilter | json}}</pre></div>
         </div>
     </div>
+    </div>
+
+    <!-- Item 12 = _indexOf -->
+    <div class="accordion-item">
+    <h2 class="accordion-header" id="headingTwelve">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwelve"
+            aria-expanded="true" aria-controls="collapseTwelve">
+            <div class="header">
+                _.indexOf - Gets the index at which the first occurrence of value is found in array.<span class="not-working"> Not Working</span>
+            </div>
+        </button>
+    </h2>
+    <div id="collapseTwelve" class="accordion-collapse collapse" aria-labelledby="headingTwelve"
+        data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+            <div>{{indexOfFilter | json}}</div>
+        </div>
+    </div>
+    </div>
+
+    <!-- Item 13 = _initial -->
+    <div class="accordion-item">
+    <h2 class="accordion-header" id="headingThirteen">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThirteen"
+            aria-expanded="true" aria-controls="collapseThirteen">
+            <div class="header">
+                _.initial - Gets all but last item from array.<span class="working"> Working</span>
+            </div>
+        </button>
+    </h2>
+    <div id="collapseThirteen" class="accordion-collapse collapse" aria-labelledby="headingThirteen"
+        data-bs-parent="#accordionExample">
+        <div style="display:flex;" class="accordion-body">
+            <table style="width:50%" class="table data-table">
+                <tr class="table-row">
+                    <th class="simpson"><span (click)="newFunctionToDo($event)">OrderId</span></th>
+                    <th class="simpson"><span (click)="newFunctionToDo($event)">Name</span></th>
+                    <th class="simpson"><span (click)="newFunctionToDo($event)">Gender</span></th>
+                </tr>
+                <tr class="table-row" *ngFor="let character of initialFilter; let i = index;">
+                    <td class="simpson"><span>{{character.orderId}}</span> </td>
+                    <td class="simpson"><span>{{character.name}}</span> </td>
+                    <td class="simpson"><span>{{character.gender}}</span> </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    </div>
+
+     <!-- Item 14 = _intersection -->
+     <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFourteen">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourteen"
+                aria-expanded="true" aria-controls="collapseFourteen">
+                <div class="header">
+                    _.intersection - Creates an array of unique values that are included in all given arrays.<span class="working"> Working</span>
+                </div>
+            </button>
+        </h2>
+        <div id="collapseFourteen" class="accordion-collapse collapse" aria-labelledby="headingFourteen" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <div class="red">These are the Charcters in both the Simpsons and Flanders family</div>
+                <div style="display:flex">
+                    <div *ngFor="let character of intersectionFilter;">
+                        <div style="margin-right:5px;margin-bottom:5px;">{{character}}</div>
+                    </div>
+                </div>
+                <div style="display:flex">
+                    <div class="intersection-family">Simpsons Family<br><pre>{{basicTwoFamilyCharacters[0] | json}}</pre></div> 
+                    <div class="intersection-family">Flanders Family<br><pre>{{basicTwoFamilyCharacters[1] | json}}</pre></div> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Item 15 = _join -->
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading15">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse15" aria-expanded="true" aria-controls="collapse15">
+                <div class="header">
+                    _.join(basicCharacters) - takes an array (I used strings...) and converts into text with a separator (I used " is a Simpson!!! ") <span class="working">Working</span>
+                </div>
+            </button>
+        </h2>
+        <div id="collapse15" class="accordion-collapse collapse" aria-labelledby="heading15" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <div>
+                    {{joinFilter}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Item 16 = _last -->
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading16">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse16" aria-expanded="true" aria-controls="collapse16">
+                <div class="header">
+                    _.last(allCharacters) - Returns last item in Array <span class="working">Working</span>
+                </div>
+            </button>
+        </h2>
+        <div id="collapse16" class="accordion-collapse collapse" aria-labelledby="heading16" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <div>
+                    <table style="width:50%" class="table">
+                        <tr>
+                            <th>OrderId</th>
+                            <th>Name</th>
+                            <th>Gender</th>
+                        </tr>
+                        <tr>
+                            <td>{{lastFilter.orderId}}</td>
+                            <td>{{lastFilter.name}}</td>
+                            <td>{{lastFilter.gender}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Item 17 = _lastIndexOf -->
+    <div class="accordion-item">
+        <h2 class="accordion-header" id="heading17">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse17" aria-expanded="true" aria-controls="collapse17">
+            <div class="header">
+                _.lastIndexOf(this.basicCharacters); <span class="working">Working</span>
+            </div>
+            </button>
+        </h2>
+        <div id="collapse17" class="accordion-collapse collapse" aria-labelledby="heading17" data-bs-parent="#accordionExample">
+            <div>{{lastIndexOfFilter}}</div>
+            <div><h2>Original Data</h2></div>
+            <div style="border:2px solid red;display:flex;" class="accordion-body">  
+                <table style="max-width:25%;border:2px solid red;" class="table data-table">
+                    <tr class="table-row">
+                        <th class="simpson"><span (click)="newFunctionToDo($event)">Name</span></th>
+                    </tr>
+                    <tr class="table-row" *ngFor="let character of basicCharacters; let i = index;">
+                        <td class="simpson"><span>{{character}}</span> </td>
+                    </tr>
+                </table>        
+            </div>
+        </div>
     </div>
 </div>

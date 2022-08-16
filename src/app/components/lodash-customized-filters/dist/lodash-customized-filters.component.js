@@ -16,11 +16,15 @@ var LodashCustomizedFiltersComponent = /** @class */ (function () {
     LodashCustomizedFiltersComponent.prototype.ngOnInit = function () {
         // For top tables
         this.allCharacters = this._characterDataservice.getAllCharacters();
+        this.basicCharacters = this._characterDataservice.getAllBasicCharacters();
+        console.log("basic characters", this.basicCharacters);
         var simpsonFamilyCharacters = this._characterDataservice.getAllCharacters();
         var twoFamiliesData = this._characterDataservice.getTwoFamilies();
         console.log("two families", twoFamiliesData);
         var allCharacters = this._characterDataservice.getAllCharacters();
-        console.log("yadda", allCharacters);
+        var basicTwoFamilyCharacters = this._characterDataservice.getBasicTwoFamilyData();
+        this.basicTwoFamilyCharacters = basicTwoFamilyCharacters;
+        console.log("tester for new variables", basicTwoFamilyCharacters);
         this.defaultFilter = _.defaults(simpsonFamilyCharacters);
         console.log("_.defaults(simpsonFamilyCharacters)", this.defaultFilter);
         // FIRST line below this comment (_.chunk) WORKS!!!! just cant loop through it the same way......because it chunks out multiple objects, still in order
@@ -43,8 +47,26 @@ var LodashCustomizedFiltersComponent = /** @class */ (function () {
         console.log("_.findIndex(simpsonFamilyCharacters, { orderId: 3, name: 'Bart', gender: 'Male' })", this.findIndexFilter);
         this.headFilter = _.head(simpsonFamilyCharacters);
         console.log("_.head(simpsonFamilyCharacters)", this.headFilter);
-        this.indexOfFilter = _.indexOf(allCharacters, { orderId: 3, name: "Bart", gender: "Male" }, 0);
-        console.log(" _.indexOf(allCharacters, { orderId: 3, name: 'Bart', gender: 'Male' }, 0)", allCharacters);
+        this.indexOfFilter = _.indexOf(allCharacters, { orderId: 3, name: "Bart", gender: "Male" });
+        console.log(" _.indexOf(allCharacters)", this.indexOfFilter);
+        this.initialFilter = _.initial(allCharacters);
+        console.log(" _.initial(allCharacters)", this.initialFilter);
+        this.intersectionFilter = _.intersection(basicTwoFamilyCharacters[0], basicTwoFamilyCharacters[1]);
+        console.log(" _.intersection(allCharacters, twoFamiliesData)", this.intersectionFilter);
+        this.joinFilter = _.join(this.basicCharacters, " is a Simpson! ");
+        console.log("_join(this.basicCharacters)", this.joinFilter);
+        this.lastFilter = _.last(allCharacters);
+        console.log("_last(allCharacters)", this.lastFilter);
+        this.lastIndexOfFilter = _.lastIndexOf([1, 2, 1, 2], 2);
+        console.log("_lastIndexOf([1,2,1,2],2)", this.lastIndexOfFilter);
+        this.lastIndexOfFilter = _.lastIndexOf([1, 2, 1, 2], 1);
+        console.log("_lastIndexOf([1,2,1,2],1)", this.lastIndexOfFilter);
+        console.log("this.basicCharacters", this.basicCharacters);
+        this.lastIndexOfFilter = _.lastIndexOf(this.basicCharacters, 'Bart');
+        console.log("_lastIndexOf(this.basicCharacters)", this.lastIndexOfFilter);
+    };
+    LodashCustomizedFiltersComponent.prototype.newFunctionToDo = function (e) {
+        console.log("event", e);
     };
     LodashCustomizedFiltersComponent = __decorate([
         core_1.Component({

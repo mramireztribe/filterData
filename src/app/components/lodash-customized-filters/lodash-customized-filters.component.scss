@@ -1,3 +1,9 @@
+@import url('../../app.component.scss');
+.red{
+    color:red;
+    font-weight: bold;
+}
+
 div.warning-message{
     color:red;
     font-weight: bold;
@@ -9,13 +15,94 @@ div.header{
     font-weight:bold;
 }
 
+.table-row{
+
+    color:black;
+    text-shadow: 2px 2px 3px #aaa;
+    border:2px solid black;
+
+    &:hover{
+        background-color:skyblue;
+        color:white;
+        text-shadow: 2px 2px 3px #000000;
+    }
+
+}
+
+.data-table{
+    tr{
+        text-shadow: 2px 2px 3px #fff;
+        th{
+            color:yellow;
+            text-shadow: 2px 2px 3px #000000;
+            background-color: skyblue;
+            padding: 10px;
+            font-size:1.2em;
+            font-weight:bold;
+            border-bottom:8px solid black;
+
+            &:hover{
+                
+                text-shadow: 2px 2px 3px #000000;
+            }
+
+            span{
+                &:hover{
+                   color:black; 
+                   cursor:pointer;
+                   text-shadow: 2px 2px 3px #fff;
+                }
+            };
+        }
+
+        &:nth-child(even){
+            background-color:yellow;
+
+            &:hover{
+                background-color:skyblue;
+                text-shadow: 2px 2px 3px #000000;
+            }
+        }
+
+        &:nth-child(odd){
+            // background-color:yellow;
+
+            &:hover{
+                background-color:skyblue;
+                text-shadow: 2px 2px 3px #000000;
+            }
+        }
+    }
+    tr{
+        td{
+            padding:10px;
+        }        
+    }
+}
+
 span.not-working{
+    font-size:1.5em;
+    font-weight:bold;
     color:red;
+    font-family:simpsonFont;
 }
 span.working{
+    font-size:1.5em;
+    font-weight:bold;
     color:green;
+    font-family:simpsonFont;
+    background-image: url('https://icons.iconarchive.com/icons/jonathan-rey/simpsons/256/Homer-Simpson-04-Happy-icon.png');
 }
 
 span.re-construct{
+    font-size:1.5em;
+    font-weight:bold;
     color:gold;
+    font-family:simpsonFont;
+}
+
+.intersection-family{
+    border:1px solid black;
+    padding:10px;
+    font-size:0.8em;
 }
