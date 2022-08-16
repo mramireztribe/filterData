@@ -24,6 +24,7 @@ var LodashCustomizedFiltersComponent = /** @class */ (function () {
         var allCharacters = this._characterDataservice.getAllCharacters();
         var basicTwoFamilyCharacters = this._characterDataservice.getBasicTwoFamilyData();
         this.basicTwoFamilyCharacters = basicTwoFamilyCharacters;
+        var basicCharacters = this._characterDataservice.getAllBasicCharacters();
         console.log("tester for new variables", basicTwoFamilyCharacters);
         this.defaultFilter = _.defaults(simpsonFamilyCharacters);
         console.log("_.defaults(simpsonFamilyCharacters)", this.defaultFilter);
@@ -53,20 +54,28 @@ var LodashCustomizedFiltersComponent = /** @class */ (function () {
         console.log(" _.initial(allCharacters)", this.initialFilter);
         this.intersectionFilter = _.intersection(basicTwoFamilyCharacters[0], basicTwoFamilyCharacters[1]);
         console.log(" _.intersection(allCharacters, twoFamiliesData)", this.intersectionFilter);
-        this.joinFilter = _.join(this.basicCharacters, " is a Simpson! ");
-        console.log("_join(this.basicCharacters)", this.joinFilter);
+        // this.joinFilter = _.join(this.basicCharacters, " is a Simpson! "); console.log("_join(this.basicCharacters)", this.joinFilter)
         this.lastFilter = _.last(allCharacters);
         console.log("_last(allCharacters)", this.lastFilter);
         this.lastIndexOfFilter = _.lastIndexOf([1, 2, 1, 2], 2);
         console.log("_lastIndexOf([1,2,1,2],2)", this.lastIndexOfFilter);
         this.lastIndexOfFilter = _.lastIndexOf([1, 2, 1, 2], 1);
         console.log("_lastIndexOf([1,2,1,2],1)", this.lastIndexOfFilter);
-        console.log("this.basicCharacters", this.basicCharacters);
-        this.lastIndexOfFilter = _.lastIndexOf(this.basicCharacters, 'Bart');
-        console.log("_lastIndexOf(this.basicCharacters)", this.lastIndexOfFilter);
+        // this.lastIndexOfFilter = _.lastIndexOf(this.basicCharacters, 'Bart'); console.log("_lastIndexOf(this.basicCharacters)", this.lastIndexOfFilter)
         this.nthFilter = _.nth(this.allCharacters, 5);
         console.log("_nth(this.nthFilter)", this.nthFilter);
         console.log("_nth(this.allCharacters)", this.allCharacters);
+        // this.pullFilter = _.pull(this.basicCharacters, "Bart"); console.log("_pull...TRY TO GET WORKING AT THE OBJECT LEVEL", this.pullFilter);
+        // this.pullAllFilter = _.pullAll(this.basicCharacters, ['Bart', 'Lisa']); console.log("_pullAll('Bart', 'Lisa')", this.pullAllFilter);
+        console.log("evens BEFORE", this.basicCharacters);
+        // this.basicCharacters = this._characterDataservice.basicCharacters;
+        console.log("originalBasicCharacters", basicCharacters);
+        var evens = _.remove(basicCharacters, function (n) {
+            console.log("n", n);
+            var test = n % 2 == 0;
+            console.log("this is the evens", test);
+        });
+        console.log("evens BEFORE", evens);
     };
     LodashCustomizedFiltersComponent.prototype.newFunctionToDo = function (e) {
         console.log("event", e);
