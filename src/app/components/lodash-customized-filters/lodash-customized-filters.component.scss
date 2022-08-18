@@ -1,5 +1,33 @@
 @import url('../../app.component.scss');
 // .accordion-item{border:1px solid black;}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+  }
+  
+  /* Tooltip text */
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+   
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
+
 .accordion{
     background-color:yellow;
 }
@@ -91,6 +119,15 @@ span.not-working{
     font-family:simpsonFont;
     text-shadow: 2px 2px 3px #000000;
     letter-spacing: 3px;
+    
+    &::after{
+        content:"";
+        margin-left:10px;
+        padding:1px 15px;
+        background: url('../../../assets/img/ralph.png');
+        background-size:100%;
+        background-repeat: no-repeat;
+    }
 }
 span.working{
     font-size:1.5em;
@@ -99,6 +136,15 @@ span.working{
     font-family:simpsonFont;
     text-shadow: 2px 2px 3px #000000;
     letter-spacing: 3px;
+
+    &::after{
+        content:"";
+        margin-left:10px;
+        padding:1px 15px;
+        background: url('../../../assets/img/ralph-working.png');
+        background-size:100%;
+        background-repeat: no-repeat;
+    }
 }
 
 span.re-construct{
@@ -108,6 +154,15 @@ span.re-construct{
     font-family:simpsonFont;
     text-shadow: 2px 2px 3px #000000;
     letter-spacing: 3px;
+
+    &::after{
+        content:"";
+        margin-left:10px;
+        padding:1px 15px;
+        background: url('../../../assets/img/ralph-needs-work.png');
+        background-size:100%;
+        background-repeat: no-repeat;
+    }
 }
 
 .intersection-family{

@@ -25,6 +25,7 @@ var LodashCustomizedFiltersComponent = /** @class */ (function () {
         var basicTwoFamilyCharacters = this._characterDataservice.getBasicTwoFamilyData();
         this.basicTwoFamilyCharacters = basicTwoFamilyCharacters;
         var basicCharacters = this._characterDataservice.getAllBasicCharacters();
+        var numberedList = this._characterDataservice.getNumberedList();
         console.log("tester for new variables", basicTwoFamilyCharacters);
         this.defaultFilter = _.defaults(simpsonFamilyCharacters);
         console.log("_.defaults(simpsonFamilyCharacters)", this.defaultFilter);
@@ -71,11 +72,16 @@ var LodashCustomizedFiltersComponent = /** @class */ (function () {
         // this.basicCharacters = this._characterDataservice.basicCharacters;
         console.log("originalBasicCharacters", basicCharacters);
         var evens = _.remove(basicCharacters, function (n) {
-            console.log("n", n);
             var test = n % 2 == 0;
-            console.log("this is the evens", test);
         });
-        console.log("evens BEFORE", evens);
+        console.log("BEFORE ._reverse(this.basicCharacters", this.basicCharacters);
+        this.reverseFilter = _.reverse(this.basicCharacters);
+        console.log("_reverse(this.basicCharacters)", this.basicCharacters);
+        console.log("this.basiCharacters", this.basicCharacters.length);
+        this.sliceFilter = _.slice(this.basicCharacters, 0, this.basicCharacters.length);
+        console.log("NOT WORKING: _slicke(this.basicCharacters,0,this.basicCharacters)", this.basicCharacters);
+        this.sortedIndex = _.sortedIndex(this.numberedList, 7);
+        console.log("NOT WORKING: this.sortedIndex", this.sortedIndex);
     };
     LodashCustomizedFiltersComponent.prototype.newFunctionToDo = function (e) {
         console.log("event", e);

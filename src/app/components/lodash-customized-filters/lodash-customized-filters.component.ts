@@ -14,6 +14,7 @@ export class LodashCustomizedFiltersComponent implements OnInit {
   allCharacters: any;
   basicTwoFamilyCharacters: any;
   basicCharacters: any;
+  numberedList: any;
 
   defaultFilter: any;
   chunkFilter: any;
@@ -36,10 +37,15 @@ export class LodashCustomizedFiltersComponent implements OnInit {
   pullFilter: any;
   pullAllFilter: any;
   removeFilter: any;
+  reverseFilter: any;
+  sliceFilter: any;
+  sortedIndex: any;
 
   constructor(private _characterDataservice: SimpsonCharacterService) { }
 
   ngOnInit(): void {
+
+
     // For top tables
     this.allCharacters = this._characterDataservice.getAllCharacters();
     this.basicCharacters = this._characterDataservice.getAllBasicCharacters(); console.log("basic characters", this.basicCharacters);
@@ -50,6 +56,7 @@ export class LodashCustomizedFiltersComponent implements OnInit {
     var allCharacters = this._characterDataservice.getAllCharacters();
     var basicTwoFamilyCharacters = this._characterDataservice.getBasicTwoFamilyData(); this.basicTwoFamilyCharacters = basicTwoFamilyCharacters;
     var basicCharacters = this._characterDataservice.getAllBasicCharacters();
+    var numberedList = this._characterDataservice.getNumberedList();
     console.log("tester for new variables", basicTwoFamilyCharacters);
 
     this.defaultFilter = _.defaults(simpsonFamilyCharacters); console.log("_.defaults(simpsonFamilyCharacters)", this.defaultFilter);
@@ -79,11 +86,14 @@ export class LodashCustomizedFiltersComponent implements OnInit {
     // this.basicCharacters = this._characterDataservice.basicCharacters;
     console.log("originalBasicCharacters", basicCharacters);
     var evens: any = _.remove(basicCharacters, function (n: any) {
-      console.log("n", n);
       var test: any = n % 2 == 0;
-      console.log("this is the evens", test)
     });
-    console.log("evens BEFORE", evens);
+    console.log("BEFORE ._reverse(this.basicCharacters", this.basicCharacters);
+    this.reverseFilter = _.reverse(this.basicCharacters); console.log("_reverse(this.basicCharacters)", this.basicCharacters);
+    console.log("this.basiCharacters", this.basicCharacters.length)
+    this.sliceFilter = _.slice(this.basicCharacters, 0, this.basicCharacters.length); console.log("NOT WORKING: _slicke(this.basicCharacters,0,this.basicCharacters)", this.basicCharacters);
+    this.sortedIndex = _.sortedIndex(this.numberedList, 7); console.log("NOT WORKING: this.sortedIndex", this.sortedIndex);
+
   }
 
   newFunctionToDo(e: any) {
